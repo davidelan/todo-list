@@ -9,9 +9,49 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
-from .models import Task
+from .models import Task, Todo_list
 
 # Create your views here.
+
+class ToDoList(LoginRequiredMixin, ListView):
+    model = Todo_list
+    context_object_name = 'todo_list'
+
+    ### Context data to prevent user to access other users data
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['todo_list'] = context['todo_list'].filter(user=self.request.user)
+
+        ### Incomplete tasks count
+        context['count'] = context['todo_list'].filter(complete=False).count()
+
+        ### search capability for tasks
+        search_input = self.request.GET.get('search-area') or ''
+        if search_input:
+            context['todo_list'] = context['todo_list'].filter(title__icontains = search_input)
+            context['search_input'] = search_input
+        return context
+
+
+class ListDetail(LoginRequiredMixin, ListView):
+    model = Todo_list
+    context_object_name = 'todo_list'
+    template_name = "todo_list/todo_list.html"
+
+# class ListView(ListView):
+#     model = Todo_list
+#     template_name = "todo_list/todo_list.html"
+
+
+# class ListCreate(LoginRequiredMixin, CreateView):
+#     model = Todo_list
+#     fields = ['title']
+#     success_url = reverse_lazy('list')
+
+#     def form_valid(self, form):
+#         form.instance.user = self.request.user
+#         return super(ListCreate, self).form_valid(form)
+
 
 class TaskList(LoginRequiredMixin, ListView):
     model = Task
@@ -67,7 +107,7 @@ class CustomLoginView(LoginView):
     redirect_authenticated_user = False
 
     def get_success_url(self):
-        return reverse_lazy('task')
+        return reverse_lazy('todo_list')
 
 
 class RegisterPage(FormView):
