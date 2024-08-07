@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import TaskList, TaskDetail, TaskCreate, TaskUpdate, TaskDelete, CustomLoginView, RegisterPage
-from .views import ListDetail, ToDoList, ListUpdate, ListCreate
+from .views import ListDetail, ToDoList, ListUpdate, ListCreate, ListDelete
 from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
@@ -14,6 +14,7 @@ urlpatterns = [
 
     path('list-update/<int:pk>/', ListUpdate.as_view(), name="list-update"),
     path('list-create/', ListCreate.as_view(), name="list-create"),
+    path('list-delete/<int:pk>/', ListDelete.as_view(), name="lists-delete"),
     
 
 

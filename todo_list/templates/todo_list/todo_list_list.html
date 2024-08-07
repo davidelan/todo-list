@@ -26,19 +26,18 @@
 <div class="task-items-wrapper">
     {% for todos in todo %}
     <div class="task-wrapper">
-     
-            <div class="task-title">
-                <div class="task-incomplete-icon"></div>
-                <!-- <a href="{% url 'list-update' todos.id %}">Update {{ todos }}</a> -->
-                <a href="{% url 'list-detail' %}">List {{ todos }}</a>
-            </div>
-            
+        <div class="task-title">
+            <div class="task-incomplete-icon"></div>
+            <a href="{% url 'list-detail' %}">{{ todos }}</a>
+        </div>
+        
+        <a class="delete-link" href="{% url 'lists-delete' todos.id %}">&#215;</a>
       
     </div>
 
     {% empty %}
     <h3>No items in list</h3>
-    <a href="{% url 'list-create' %}">Add New Item</a>
+    <a href="{% url 'list-create' %}">Add New List</a>
     {% endfor %}
 
 </div>

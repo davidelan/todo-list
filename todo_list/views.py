@@ -45,35 +45,27 @@ class ListDetail(LoginRequiredMixin, DetailView):
         context['tasks'] = Task.objects.filter(todo_list=self.object)
         return context
 
-# class ListView(ListView):
-#     model = Todo_list
-#     template_name = "todo_list/todo_list.html"
-
-
-# class ListCreate(LoginRequiredMixin, CreateView):
-#     model = Todo_list
-#     fields = ['title']
-#     success_url = reverse_lazy('list')
-
-#     def form_valid(self, form):
-#         form.instance.user = self.request.user
-#         return super(ListCreate, self).form_valid(form)
-
 class ListUpdate(LoginRequiredMixin, UpdateView):
     model = Todo_list
-    fields = ['title', 'content']
+    fields = ['title']
     success_url = reverse_lazy('todo')
 
 
 class ListCreate(LoginRequiredMixin, CreateView):
     model = Todo_list
-    fields = ['title', 'content']
+    fields = ['title']
     success_url = reverse_lazy('todo')
 
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(ListCreate, self).form_valid(form)
 
+
+class ListDelete(LoginRequiredMixin, DeleteView):
+    template_name = 'todo_list/list_confirm_delete.html'
+    model = Todo_list
+    context_object_name = 'todo'
+    success_url = reverse_lazy('todo')
 
 
 ######## TASK views
@@ -147,8 +139,8 @@ class RegisterPage(FormView):
             login(self.request, user)
         return super(RegisterPage, self).form_valid(form)
 
-    ### in order to go back to task if trying to load register page
+    ### in order to go back to lists if trying to load register page
     def get(self, *args, **kwargs):
         if self.request.user.is_authenticated:
-            return redirect('task')
+            return redirect('todo')
         return super(RegisterPage, self).get(*args, *kwargs)
