@@ -3,6 +3,7 @@
 {% block content %}
 
 <div class="header-bar">
+    <a href="{% url 'todo' %}">&#8592; Back to Todo Lists</a>
     <div>
         <h1>Hello {{ request.user|title }}</h1>
         <h3>You have <i>{{ count }} incomplete task{{ count|pluralize:'s' }}</i></h3>

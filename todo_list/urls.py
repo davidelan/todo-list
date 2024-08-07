@@ -10,7 +10,7 @@ urlpatterns = [
     path('', ToDoList.as_view(), name="todo"),
     #path('todo_list/<int:pk>/', ListDetail.as_view(), name="list-detail"),
 
-    path('todo_list/<int:pk>/', TaskList.as_view(), name="list-detail"),
+    path('todo_list/', TaskList.as_view(), name="list-detail"),
 
     path('list-update/<int:pk>/', ListUpdate.as_view(), name="list-update"),
     path('list-create/', ListCreate.as_view(), name="list-create"),
