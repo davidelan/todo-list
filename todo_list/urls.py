@@ -1,11 +1,20 @@
 from django.urls import path
-from .views import TaskList, TaskDetail, TaskCreate, TaskUpdate, TaskDelete, CustomLoginView, RegisterPage, ListDetail
+from .views import TaskList, TaskDetail, TaskCreate, TaskUpdate, TaskDelete, CustomLoginView, RegisterPage
+from .views import ListDetail, ToDoList, ListUpdate, ListCreate
 from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
-    #path('', TaskList.as_view(), name="task"),
+    path('task/', TaskList.as_view(), name="task"),
     #path('todo-list/<int:pk>/', ListDetail.as_view(), name="todo_list"),
-    path('', ListDetail.as_view(), name="todo_list"),
+    #path('', ListDetail.as_view(), name="todo_list"),
+    path('', ToDoList.as_view(), name="todo"),
+    #path('todo_list/<int:pk>/', ListDetail.as_view(), name="list-detail"),
+
+    path('todo_list/<int:pk>/', TaskList.as_view(), name="list-detail"),
+
+    path('list-update/<int:pk>/', ListUpdate.as_view(), name="list-update"),
+    path('list-create/', ListCreate.as_view(), name="list-create"),
+    
 
 
 
