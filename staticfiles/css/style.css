@@ -133,74 +133,72 @@ label {
 
 /************ BASE.HTML Styling *****************/
 
-body {
+
+/* Top Description Bar */
+.top-bar {
+    max-width: 800px;
+    margin: -50px auto 20px auto;
+    padding: 0px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.description {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9; /* Lighter background for better contrast */
+    font-size: 16px;
+    line-height: 1.6;
     color: #333;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Navigation Bar */
-.navbar {
-    background-color: #444; /* Darker navbar background for better contrast */
-    padding: 10px 0;
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.brand {
-    color: #f4f4f4; /* Lighter brand color for contrast */
-    font-size: 24px;
-    text-decoration: none;
-}
-
-.nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    color: #f4f4f4; /* Lighter link color for better visibility */
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-.footer {
-    background-color: #444; /* Darker footer background for better contrast */
-    color: #f4f4f4; /* Lighter text color for readability */
     text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+    padding: 0 10px;
 }
 
-.footer .social-link {
-    color: #f4f4f4; /* Lighter link color for better visibility */
-    text-decoration: none;
+.p-login {
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    color: red;
+    text-align: center;
+}
+
+/* Footer Bar */
+.footer-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f9f9f9; 
+    color: #000000;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Shadow at the top of the footer */
+}
+
+.social-text {
+    font-family: Arial, sans-serif;
+    color: #000000;
+    font-size: 18px;
+    margin: 0;
+}
+
+.social-links {
+    margin-top: 5px;
+}
+
+.social-link {
+    color: #000000;
     margin: 0 10px;
+    text-decoration: none;
+    font-size: 16px;
 }
 
-.footer .social-link:hover {
+.social-link:hover {
     text-decoration: underline;
 }
+
+
+@media (max-height: 735px) {
+    .footer-bar {
+     display: none;
+    }
+  }
