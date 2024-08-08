@@ -9,17 +9,10 @@ class Todo_list(models.Model):
     A model representing a TO-DO List.
 
     Attributes:
-        todo_list_id (CharField): Unique identifier for the todo_list.
-        list_name (CharField): Name of the todo_list.
-        due_date (DateField): Due date for the todo_list.
-        description (TextField): Description of the todo_list.
-        created_by (ForeignKey): User who created the todo_list.
-        created_on (DateTimeField): Timestamp when the todo_list was created.
-        updated_at (DateTimeField): Timestamp when the todo_list was last
-        updated.
+        title (CharField): Unique identifier for the todo_list.
+        user (ForeignKey): User who created the todo_list.
     """
     title = models.CharField(max_length=200, unique=True)
-    #slug = models.SlugField(max_length=200, unique=True)
     user = models.ForeignKey(
     User, on_delete=models.CASCADE, related_name="todo_lists"
     )
@@ -38,12 +31,12 @@ class Task(models.Model):
 
     Attributes:
         task_id (CharField): Unique identifier for the todo_list.
-
+        todo_list (ForeignKey): relation to Todo_list model
         due_date (DateField): Due date for the todo_list.
         description (TextField): Description of the todo_list.
         created_by (ForeignKey): User who created the todo_list.
         created_on (DateTimeField): Timestamp when the todo_list was created.
-        updated_at (DateTimeField): Timestamp when the todo_list was last
+        updated_on (DateTimeField): Timestamp when the todo_list was last
         updated.
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
