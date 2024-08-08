@@ -99,12 +99,7 @@ h6 {
     color: #6249cf;
     font-size: 22px;
     line-height: 0;
-    padding-left: 0px;
-    padding-right: 5px;
-}
-
-.todos {
-    margin-left: 20px;
+    padding: 20px 20px;
 }
 
 input[type=text],

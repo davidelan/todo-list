@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
@@ -27,12 +28,18 @@
     {% for todos in todo %}
     <div class="task-wrapper">
         <div class="task-title">
-            <div class="task-incomplete-icon"></div>
-            <a href="{% url 'list-detail' %}">{{ todos }}</a>
+            <div>
+                <a class="delete-link" href="{% url 'list-update' todos.id%}"><img src="{% static 'images/edit.png' %}" alt="Edit"></a>
+                
+            </div>
+            <a  class="todos" href="{% url 'list-detail' %}">{{ todos }}</a>
+            
         </div>
         
         <a class="delete-link" href="{% url 'lists-delete' todos.id %}">&#215;</a>
-      
+
+       
+        
     </div>
 
     {% empty %}
