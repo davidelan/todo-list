@@ -44,6 +44,10 @@ h6 {
     overflow: hidden;
 }
 
+.task-items-wrapper {
+    padding: 20px;
+ }
+
 .task-title {
     display: flex;
     padding: 20px;
