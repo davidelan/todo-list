@@ -131,6 +131,10 @@ label {
     
 }
 
+.card-body>form>p>label {
+    font-weight: bold;
+}
+
 /************ BASE.HTML Styling *****************/
 
 
@@ -195,6 +199,23 @@ label {
 .social-link:hover {
     text-decoration: underline;
 }
+
+#reg-p {
+    margin-bottom: 0px;
+    margin-top: 40px;
+}
+
+#reg-p2 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.errorlist {
+    font-weight: bold;
+    color: red;
+}
+
+
 
 
 @media (max-height: 735px) {

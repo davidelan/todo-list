@@ -9,18 +9,24 @@
 <div class="card-body">
     <form action="" method="post">
         {% csrf_token %}
-        <label>{{ form.username.label }}</label>
+        {{ form.as_p}}
+        <input class="button" type="submit" value="Get in!">
+
+        <!-- <label>{{ form.username.label }}</label>
         {{ form.username }}
-    
+
+        <p id="reg-p"><b>Password must be at least 8 characters</b></p>
+        <p id="reg-p2"><b>and contain at least one number!</b></p>
+
         <label>{{ form.password1.label }}</label>
         {{ form.password1 }}
-    
+        
         <label>{{ form.password2.label }}</label>
         {{ form.password2 }}
         <br><br>
-        <input class="button" type="submit" value="Register Now">
+        <input class="button" type="submit" value="Register Now">-->
     
-        <small><p>Have an account already? <a href="{% url 'login' %}">Login Now</a></p></small>
+        <small><p>Have an account already? <a href="{% url 'login' %}">Login Now</a></p></small> 
      </form>
 </div>
 {% endblock content %}

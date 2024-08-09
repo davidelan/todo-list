@@ -10,6 +10,7 @@ from django.contrib.auth import login
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from .models import Task, Todo_list
+from django import forms
 
 # Create your views here.
 
@@ -127,9 +128,10 @@ class CustomLoginView(LoginView):
         return reverse_lazy('todo')
 
 
-class RegisterPage(FormView):
+class RegisterPage(forms.Form, FormView):
     template_name = 'todo_list/register.html'
     form_class = UserCreationForm
+    myfield = forms.CharField(widget=forms.TextInput(attrs={'class': 'myfieldclass'}))
     redirect_authenticated_user = True
     success_url = reverse_lazy('todo')
 
