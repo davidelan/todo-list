@@ -9,7 +9,7 @@
     <div>
         <a href="{% url 'todo' %}">&#8592; Back to Todo Lists</a>
         <h1>Dear {{ request.user|title }}</h1>
-        <h3>You have <i>{{ count }} incomplete task{{ count|pluralize:'s' }} in your {{ request }}</i></h3>
+        <h3>You have <i>{{ count }} incomplete task{{ count|pluralize:'s' }} in your {{ request.title }}</i></h3>
     </div>
     {% if request.user.is_authenticated %}
         <a href="{% url 'logout' %}">Logout</a>
@@ -46,7 +46,8 @@
 
     {% empty %}
     <h3>No items in list</h3>
-    <a href="{% url 'task-create' %}">Add New Item</a>
+    <button class="button"><a class="buttona" href="{% url 'task-create' %}">Add New Item</a></button>
+    
     {% endfor %}
 
 </div>
