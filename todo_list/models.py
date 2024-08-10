@@ -9,20 +9,22 @@ class Todo_list(models.Model):
     A model representing a TO-DO List.
 
     Attributes:
+        list_id (SlugField): Unique slug identifier
         title (CharField): Unique identifier for the todo_list.
         user (ForeignKey): User who created the todo_list.
     """
+    list_id = models.SlugField(max_length=200, unique=True, null=True)
     title = models.CharField(max_length=200, unique=True)
     user = models.ForeignKey(
     User, on_delete=models.CASCADE, related_name="todo_lists"
     )
-    #content = models.TextField()
-    #created_on = models.DateTimeField(auto_now_add=True)
-    #updated_on = models.DateTimeField(auto_now=True)
 
+    def get_absolute_url(self):
+        return reverse("list", args=[self.id])
+   
     def __str__(self):
         #return f"{self.title} | written by {self.user}"
-        return f"{self.title}"
+        return self.title
 
 
 class Task(models.Model):
@@ -30,16 +32,15 @@ class Task(models.Model):
     A model representing a Task in the TO-DO list.
 
     Attributes:
-        task_id (CharField): Unique identifier for the todo_list.
+        user (ForeignKey): User who created the task.
         todo_list (ForeignKey): relation to Todo_list model
-        due_date (DateField): Due date for the todo_list.
-        description (TextField): Description of the todo_list.
-        created_by (ForeignKey): User who created the todo_list.
-        created_on (DateTimeField): Timestamp when the todo_list was created.
-        updated_on (DateTimeField): Timestamp when the todo_list was last
+        title (CharField): Unique identifier for the task.
+        description (TextField): Description of the task.
+        created_on (DateTimeField): Timestamp when the task was created.
+        updated_on (DateTimeField): Timestamp when the task was last
         updated.
     """
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="task_items", null=True, blank=True)
     todo_list = models.ForeignKey(Todo_list, on_delete=models.CASCADE, null=True, blank=True)
     title = models.CharField(max_length=200, null=True)
     description = models.TextField(null=True, blank=True)
@@ -47,11 +48,16 @@ class Task(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
 
+    def get_absolute_url(self):
+        return reverse(
+            "tasks-update", args=[str(self.todo_list.id), str(self.id)]
+        )
+
     def __str__(self):
         return self.title
 
     class Meta:
-        ordering = ['complete']
+        ordering = ['created_on']
 
 
     

@@ -179,6 +179,7 @@ label {
     position: fixed;
     bottom: 0;
     width: 100%;
+    left: 0px;
     background-color: #f9f9f9; 
     color: #000000;
     text-align: center;
