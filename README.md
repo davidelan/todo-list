@@ -96,4 +96,153 @@ User Stories with their id:  <br>
 
 ![All devices Task List Wireframe](documentation/images/task_list.png)
 
+
 ### Imagery
+ 
+The background image was found at Pexels and was created by [Suzy Hazelwood]:(https://www.pexels.com/photo/notebook-1226398/) It was used to create the colour palette and logo. 
+The background image is a picture of a ring notebook where usually people write down todo lists.
+
+
+
+#### Colour Scheme:
+  
+I kept the color scheme very simple and I used two different shades of green, one for the main base page (login, registration, task list and task list update and deletion) and for the complition of a task.
+
+
+### Typography
+
+[Mulish](https://fonts.google.com/specimen/Mulish) was used across the whole project with the only exception of the text "Connect with us:" in the footer in which I used the standard Arial font.<br>
+
+
+## Structure 
+
+The final database schema is the representation of the two database models that were later implemented. As you can see from the image there are more fields than what were used in the project. This is becasue I started with the idea of having multiple TODO Lists which each could contain multiple taks. I would have liked to also show the user for both categories hte date of creation and update. Unfortunately I realized near the submission deadline that I would not have time to implement all the ideas and I had to revert to the simplest version. 
+It is my intention to proceed with the above implementation when the course has ended.
+
+![Final Database Schema](documentation/images/erd_todo_list.jpg)<br>
+
+## Database<br>
+I used a PostgreSQL provided by Code Institute as relational database.<br>
+
+- **FieldTypes:**<br>
+  - AutoField: An integer field that automatically increments.
+  - CharField: A text field with a maximum length.
+  - DateTimeField: A field for storing date and time.
+  - TextField: A large text field.
+  - ForeignKey: A many-to-one relationship.
+  - IntegerField: An integer field.
+  - BooleanField: A boolean field.
+
+- **Relationships:**<br>
+  - A User has one TODO list.
+  - A User can create many Tasks in the TODO list.
+  - A Task belongs to the TODO list.
+
+## Features
+
+ - See the landing page / login page
+
+![See landing page](documentation/images/landing_login.jpg)
+
+
+- The user can create an account
+
+![Create an Account](documentation/images/registration.jpg)
+
+
+- View todo list and all its tasks
+
+![View todo list](documentation/images/todo_list.jpg)
+
+
+- The user can create or edit a task
+
+![Edit/Update a task](documentation/images/edit_update_task.jpg)
+
+
+- The user can delete a task
+
+![Delete a task](documentation/images/delete_task.jpg)
+
+
+### Features, which I would like to implement in the future
+
+- The main feature that I would like to implement is to have multiple todo lists. 
+- I would also like to add informnation about the date of the creation and updating of the tasks.
+- It would be nice to also have a priority system which would support the user in choosing the sequence of tasks to complete
+- Definitely improve the look of the app and that of the landing page
+
+# Technologies Used
+
+Here the list technologies used to carry out the project:
+
+- [GitPod](https://gitpod.io/) - IDE used to create the site. To build and create this project.
+- [GitHub](https://github.com/) used to save and store the files for the website.
+- [Git](https://git-scm.com/) used in conjunction with Gitpod to commit code to the GitHub repository.
+- [Heroku](https://www.heroku.com) was used to deploy the application.
+- [Code Insitute Database Maker](https://dbs.ci-dbs.net/) PostgreSQL database hosting for this project
+- [Balsamiq](https://balsamiq.com/) used to create the wireframes.
+- [Lucid](https://lucid.app/) used to create the Flowchart.
+- [Beautifier](https://beautifier.io/) to beautify the HTML code
+- [Pexels](https://www.pexels.com/) used to find a background image for the project.
+- [Browserling](https://www.browserling.com/) used to test the application on different browsers. 
+- [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools) used to check the application for responsiveness and errors. 
+
+# Programming Languages, Frameworks and Libraries Used
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Django](https://www.djangoproject.com/)
+
+
+# Agile
+
+In order to develop the project using the Agile methodology, the GItHub Project Board and Issues were used.
+
+- [Project Board](https://github.com/users/davidelan/projects/3)
+
+# Testing
+
+During this project, I tested each section or function/model as it was built, addressing any functionality or styling issues that arose. These issues were corrected before moving forward. Additionally, external people tested the site by signing up, creating, editing and deleting tasks on various devices and platforms (iOS, Android, mobile, tablet, etc.). They adviced me about any problems they encountered with functionality or styling. The testing is reported in the tables below.
+
+## Manual Testing
+
+ADMIN
+| TEST | OUTCOME | PASS/FAIL|
+|:---:|:---:|:---:|
+
+| Login as superuser | Access the admin login page | Pass |
+| Manage user accounts | add, update and delete users. | Pass |
+| Manage tasks | add, update and delete a tasks. | Pass |
+
+
+## User
+
+| TEST | OUTCOME | PASS/FAIL|
+|:---:|:---:|:---:|
+| Create Task | Task successfully created and displayed | Pass |
+| Read task title and description | Task displayed correctly | Pass |
+| Edit Task | Task successfully created and displayed | Pass |
+| Delete Task | Task successfully deleted | Pass |
+| Mark Task as completed | Task successfully checked as completed | Pass |
+| Search Task | Task found using search option | Pass |
+| Check username and password validity | Error message if username or passwords do not comply to rules | Pass |
+| Create Account | Account created successfully | Pass |
+| Login | Login Successful | Pass |
+| Logout | Logout Successful | Pass |
+
+
+## Bugs
+
+One of my users reported that they were unable to sign up when including an email address (although the inclusion of an email address is not required), but myself and others were unable to replicate this issue so the bug was marked as closed.
+
+Throughout this project, I encountered several styling bugs, typically after adding a new section or template page. I resolved these issues by inspecting the page and by adjusting some CSS styling.
+
+Towaeds the deadline of the project submission I experienced a corrupted database. The problem required a database reset, which I managed to achieve with the invaluable help of the Code Institute's Tutor Support. 
+
+I had several times issues with pushing hte code to GitHub. For some reasons that I still don't know, there were inconsistencies between commits. Three times I had to force the push command (git push -f).
+
+Huge problem when I wanted to revert the project to an earlier commit. Something went wrong with the reset command and I lost a great amount of work. 
+
+
