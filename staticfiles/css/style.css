@@ -232,9 +232,9 @@ label {
 }
 
 
-@media (max-height: 735px) {
-    .footer-bar {
-     padding-top: 0px;
+@media (max-height: 730px) {
+    .social-text {
+        display: none;
     }
 }
 
