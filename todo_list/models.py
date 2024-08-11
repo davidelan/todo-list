@@ -40,9 +40,9 @@ class Task(models.Model):
         updated_on (DateTimeField): Timestamp when the task was last
         updated.
     """
+    title = models.CharField(max_length=200, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="task_items", null=True, blank=True)
     todo_list = models.ForeignKey(Todo_list, on_delete=models.CASCADE, null=True, blank=True)
-    title = models.CharField(max_length=200, null=True)
     description = models.TextField(null=True, blank=True)
     complete = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
