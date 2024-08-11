@@ -81,3 +81,19 @@ User Stories with their id:  <br>
 
 
 ## Design
+
+### Wireframes
+
+- All devices - Landing Page Wireframe
+
+![All devices Landing Page Wireframe](documentation/images/landing_page.png)
+
+- All devices - Registration Wireframe
+
+![All devices Registration Wireframe](documentation/images/registration.png)
+
+- All devices - Task List Wireframe
+
+![All devices Task List Wireframe](documentation/images/task_list.png)
+
+### Imagery
