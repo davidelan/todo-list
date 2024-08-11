@@ -179,6 +179,7 @@ label {
     bottom: 0;
     width: 100%;
     left: 0px;
+    padding-top: 3px;
     background-color: #f9f9f9; 
     color: #000000;
     text-align: center;
@@ -228,11 +229,12 @@ label {
     width: 100vw;
     height: 100vh;
     background-size: cover;
-  }
+}
+
 
 @media (max-height: 735px) {
     .footer-bar {
-     display: none;
+     padding-top: 0px;
     }
-  }
+}
 
