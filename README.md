@@ -204,44 +204,6 @@ In order to develop the project using the Agile methodology, the GItHub Project 
 
 # Testing
 
-During this project, I tested each section or function/model as it was built, addressing any functionality or styling issues that arose. These issues were corrected before moving forward. Additionally, external people tested the site by signing up, creating, editing and deleting tasks on various devices and platforms (iOS, Android, mobile, tablet, etc.). They adviced me about any problems they encountered with functionality or styling. The testing is reported in the tables below.
-
-## Manual Testing
-
-### Admin
-
-| TEST | OUTCOME | PASS/FAIL|
-|:---:|:---:|:---:|
-| Login as superuser | Access the admin login page | Pass |
-| Manage user accounts | add, update and delete users. | Pass |
-| Manage tasks | add, update and delete a tasks. | Pass |
+Please, go to [TESTING.md](TESTING.md) to see a detailed report of the testing of the project.
 
 
-
-### User
-
-| TEST | OUTCOME | PASS/FAIL|
-|:---:|:---:|:---:|
-| Create Task | Task successfully created and displayed | Pass |
-| Read task title and description | Task displayed correctly | Pass |
-| Edit Task | Task successfully created and displayed | Pass |
-| Delete Task | Task successfully deleted | Pass |
-| Mark Task as completed | Task successfully checked as completed | Pass |
-| Search Task | Task found using search option | Pass |
-| Check username and password validity | Error message if username or passwords do not comply to rules | Pass |
-| Create Account | Account created successfully | Pass |
-| Login | Login Successful | Pass |
-| Logout | Logout Successful | Pass |
-
-
-## Bugs
-
-One of my users reported that they were unable to sign up when including an email address (although the inclusion of an email address is not required), but myself and others were unable to replicate this issue so the bug was marked as closed.
-
-Throughout this project, I encountered several styling bugs, typically after adding a new section or template page. I resolved these issues by inspecting the page and by adjusting some CSS styling.
-
-Towaeds the deadline of the project submission I experienced a corrupted database. The problem required a database reset, which I managed to achieve with the invaluable help of the Code Institute's Tutor Support. 
-
-I had several times issues with pushing the code to GitHub. For some reasons that I still don't know, there were inconsistencies between commits. Three times I had to force the push command (git push -f).
-
-Huge problem when I wanted to revert the project to an earlier commit. Something went wrong with the reset command and I lost a great amount of work. 

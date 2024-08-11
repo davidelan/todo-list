@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-
 # Create your models here.
 
 class Todo_list(models.Model):
@@ -17,12 +16,11 @@ class Todo_list(models.Model):
     list_id = models.SlugField(max_length=200, unique=True, null=True)
     title = models.CharField(max_length=200, unique=True)
     user = models.ForeignKey(
-    User, on_delete=models.CASCADE, related_name="todo_lists"
-    )
+        User, on_delete=models.CASCADE, related_name="todo_lists")
 
     def get_absolute_url(self):
         return reverse("list", args=[self.id])
-   
+
     def __str__(self):
         return self.title
 
@@ -41,8 +39,15 @@ class Task(models.Model):
         updated.
     """
     title = models.CharField(max_length=200, null=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="task_items", null=True, blank=True)
-    todo_list = models.ForeignKey(Todo_list, on_delete=models.CASCADE, null=True, blank=True)
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name="task_items",
+        null=True,
+        blank=True
+    )
+    todo_list = models.ForeignKey(
+        Todo_list, on_delete=models.CASCADE, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     complete = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
@@ -55,11 +60,6 @@ class Task(models.Model):
 
     def __str__(self):
         return self.title
-       
-        
+
     class Meta:
         ordering = ['created_on']
-
-
-    
-

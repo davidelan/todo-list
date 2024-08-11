@@ -44,7 +44,7 @@
 
     {% empty %}
     <h3>Your TODO List contains NO Items</h3>
-    <button class="button"><a class="buttona" href="{% url 'task-create' %}">Add New Item</a></button>
+    <a href="{% url 'task-create' %}" class="button">Add New Item</a>
     
     {% endfor %}
 

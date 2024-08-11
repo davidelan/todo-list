@@ -1,9 +1,11 @@
-from django.urls import path
-from .views import TaskList, TaskDetail, TaskCreate, TaskUpdate, TaskDelete, CustomLoginView, RegisterPage
 from django.contrib.auth.views import LogoutView
+from django.urls import path
+from .views import TaskList, TaskDetail, TaskCreate, TaskUpdate
+from .views import TaskDelete, CustomLoginView, RegisterPage
+
 
 urlpatterns = [
-    path('', TaskList.as_view(), name="task"), ### Landing page
+    path('', TaskList.as_view(), name="task"),  # Landing page
 
     path('task-create/', TaskCreate.as_view(), name="task-create"),
     path('login/', CustomLoginView.as_view(), name="login"),

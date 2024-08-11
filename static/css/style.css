@@ -142,7 +142,7 @@ label {
     color: white;
 }
 
-#small-text {
+.small-text {
     font-size: smaller;
 }
 
