@@ -142,6 +142,10 @@ label {
     color: white;
 }
 
+#small-text {
+    font-size: smaller;
+}
+
 
 /************ BASE.HTML Styling *****************/
 
