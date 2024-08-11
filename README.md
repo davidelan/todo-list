@@ -51,7 +51,6 @@ This project was designed using Agile methodology, utilising the Project Board a
 The Project board can be seen [here](https://github.com/users/davidelan/projects/3/views/1).
 
 
-
 ### User stories
 
 THe TODO list creator is meant for anyone who wants to create a todo list. <br>
