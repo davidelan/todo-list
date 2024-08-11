@@ -55,7 +55,6 @@ class Task(models.Model):
 
     def __str__(self):
         return self.title
-        #return f"{self.title} | crated {self.created_on}"
        
         
     class Meta:
