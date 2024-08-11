@@ -6,7 +6,7 @@ body{
 
 .container {
     max-width: 550px;
-    margin: auto;
+    margin: 70px auto auto auto;
     background-color: #fff;
     -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
     box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
@@ -17,7 +17,6 @@ body{
     justify-content: space-between;
     color: #fff;
     padding: 10px;
-    border-radius: 5px 5px 0 0;
     background: green;
 }
 
@@ -183,7 +182,6 @@ label {
     background-color: #f9f9f9; 
     color: #000000;
     text-align: center;
-    padding: 10px 0;
     z-index: 1000;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Shadow at the top of the footer */
 }
@@ -227,8 +225,9 @@ label {
 
 
 #bg {
+    width: 100vw;
+    height: 100vh;
     background-size: cover;
-    background-repeat:repeat;
   }
 
 @media (max-height: 735px) {
