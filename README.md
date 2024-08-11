@@ -208,16 +208,17 @@ During this project, I tested each section or function/model as it was built, ad
 
 ## Manual Testing
 
-ADMIN
+### Admin
+
 | TEST | OUTCOME | PASS/FAIL|
 |:---:|:---:|:---:|
-
 | Login as superuser | Access the admin login page | Pass |
 | Manage user accounts | add, update and delete users. | Pass |
 | Manage tasks | add, update and delete a tasks. | Pass |
 
 
-## User
+
+### User
 
 | TEST | OUTCOME | PASS/FAIL|
 |:---:|:---:|:---:|
@@ -241,8 +242,6 @@ Throughout this project, I encountered several styling bugs, typically after add
 
 Towaeds the deadline of the project submission I experienced a corrupted database. The problem required a database reset, which I managed to achieve with the invaluable help of the Code Institute's Tutor Support. 
 
-I had several times issues with pushing hte code to GitHub. For some reasons that I still don't know, there were inconsistencies between commits. Three times I had to force the push command (git push -f).
+I had several times issues with pushing the code to GitHub. For some reasons that I still don't know, there were inconsistencies between commits. Three times I had to force the push command (git push -f).
 
 Huge problem when I wanted to revert the project to an earlier commit. Something went wrong with the reset command and I lost a great amount of work. 
-
-
