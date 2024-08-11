@@ -13,8 +13,7 @@ View the deployed site [here.](https://davide-todo-list-ada1093e37d7.herokuapp.c
 ## Table of contents
 
 - [User Experience](#user-experience)
-  - [Milestones](#milestones)
-  - [User stories](#epics-and-user-stories)
+  - [User stories](#user-stories)
 - [Design](#design)
   - [Wireframes](#wireframes)
   - [Typography](#typography)
@@ -45,3 +44,41 @@ View the deployed site [here.](https://davide-todo-list-ada1093e37d7.herokuapp.c
   - [Code](#code)
   - [ReadMe](#readme)
   - [Acknowledgments](#acknowledgments)
+
+## User Experience
+
+This project was designed using Agile methodology, utilising the Project Board and Issues sections in GitHub<br>
+The Project board can be seen [here](https://github.com/users/davidelan/projects/3/views/1).
+
+
+
+### User stories
+
+THe TODO list creator is meant for anyone who wants to create a todo list. <br>
+
+User Stories with their id:  <br>
+
+- As a Site User I can view the content of the todo list so that I can read the full text. [#2](https://github.com/davidelan/todo-list/issues/2)
+
+- As a Site User I can create an account so that I can log in into m y account. [#3](https://github.com/davidelan/todo-list/issues/3)
+
+- As a Site Admin/Registered User I can create todo lists' Items so that I can manage my site content. [#8](https://github.com/davidelan/todo-list/issues/8)
+
+- As a Site Admin/Registered User I can view a todo list item so that I can view my site content. [#9](https://github.com/davidelan/todo-list/issues/9)
+
+- As a Site Admin/Registered User I can update a todo list item so that I can manage my site content. [#10](https://github.com/davidelan/todo-list/issues/10)
+
+- As a Site Admin/Registered User I can Delete a todo list item so that I can manage my site content. [#11](https://github.com/davidelan/todo-list/issues/11)
+
+- As a Site Admin/Registered User I can log in to my account so that I can mange todo lists' items. [#12](https://github.com/davidelan/todo-list/issues/12)
+
+- As a Site Admin/Registered User I can log out from my account so that no one can have access to my data. [#13](https://github.com/davidelan/todo-list/issues/13)
+
+- As a site user I can set a task box as completed so that I can focus on non-completed tasks. [#16](https://github.com/davidelan/todo-list/issues/16)
+
+- As a Site User I can search for a task in the task list so that I view the desired task. [#17](https://github.com/davidelan/todo-list/issues/17)
+
+- As the superuser I can access the site's administrative features so that I have access to the admin panel. [#18](https://github.com/davidelan/todo-list/issues/18)
+
+
+## Design
