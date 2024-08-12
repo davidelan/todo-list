@@ -1,3 +1,17 @@
+## Table of contents
+
+- [Testing](#testing)
+  - [Manual Testing](#manual-testing)
+    - [Admin](#admin)
+    - [User](#user)
+  - [Bugs](#bugs)
+  - [Lighthouse](#lighthouse)
+  - [Validation Testing](#validation-testing)
+    - [HTML](#html)
+    - [CSS](#css)
+  - [Python Testing](#python-testing)
+
+
 # Testing
 
 During this project, I tested each section or function/model as it was built, addressing any functionality or styling issues that arose. These issues were corrected before moving forward. Additionally, external people tested the site by signing up, creating, editing and deleting tasks on various devices and platforms (iOS, Android, mobile, tablet, etc.). They adviced me about any problems they encountered with functionality or styling. The testing is reported in the tables below.

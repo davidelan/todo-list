@@ -16,34 +16,37 @@ View the deployed site [here.](https://davide-todo-list-ada1093e37d7.herokuapp.c
   - [User stories](#user-stories)
 - [Design](#design)
   - [Wireframes](#wireframes)
+  - [Imagery](#imagery)
+  - [Colour Scheme](#colour-scheme)
   - [Typography](#typography)
 - [Structure](#structure)
 - [Database](#database)
 - [Features](#features)
-- [Bugs](#bugs)
+  - [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
-  - [Languages](#languages)
-  - [Tools](#tools)
-  - [Frameworks](#frameworks)
-  - [Libraries and modules](#libraries-and-modules)
+  - [Programming Languages](#programming-languages)
+  - [Agile](#agile)
 - [Testing](#testing)
-  - [Validator Testing](#validator-testing)
-  - [Lighthouse Test](#lighthouse-test)
-  - [Manual testing](#manual-testing)
-  - [Browser Compatibility](#browser-compatibility)
-  - [Automated Testing](#automated-testing)
 - [Deployment](#deployment)
-  - [Heroku](#heroku)
-  - [Local deployment](#local-deployment)
-  - [Forking this GitHub repository](#forking-this-github-repository)
-  - [Clone this repository](#clone-this-repository)
-  - [Create PostgreSQL using Code Institute Database Maker](#create-postgresql-using-code-institute-database-maker)
-  - [Gmail](#gmail)
+  - [Github Deployment](#github-deployment)
+  - [Create App](#create-app)
+  - [Create database](#create-database)
+  - [Create the Heroku app](#create-the-heroku-app)
+  - [Create an env file](#create-an-env-file)
+  - [Heroku deployment settings](#heroku-deployment-settings)
+  - [Set Template directory](#set-template-directory)
+  - [Heroku host allow](#heroku-host-allow)
+  - [Create a Procfile](#create-a-procfile)
+  - [Deployment on Heroku](#deployment-on-heroku)
+- [Development](#development)
+  - [Fork](#fork)
+  - [Clone](#clone)
 - [Credits](#credits)
-  - [Content](#content)
+  - [Images](#images)
   - [Code](#code)
   - [ReadMe](#readme)
   - [Acknowledgments](#acknowledgments)
+
 
 ## User Experience
 
@@ -104,7 +107,7 @@ The background image is a picture of a ring notebook where usually people write 
 
 
 
-#### Colour Scheme:
+### Colour Scheme
   
 I kept the color scheme very simple and I used two different shades of green, one for the main base page (login, registration, task list and task list update and deletion) and for the complition of a task.
 
@@ -165,7 +168,8 @@ I used a PostgreSQL provided by Code Institute as relational database.<br>
 ![Delete a task](documentation/images/delete_task.jpg)
 
 
-### Features, which I would like to implement in the future
+### Future Features
+Features, which I would like to implement in the future
 
 - The main feature that I would like to implement is to have multiple todo lists. 
 - I would also like to add informnation about the date of the creation and updating of the tasks.
@@ -188,7 +192,8 @@ Here the list technologies used to carry out the project:
 - [Browserling](https://www.browserling.com/) used to test the application on different browsers. 
 - [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools) used to check the application for responsiveness and errors. 
 
-# Programming Languages, Frameworks and Libraries Used
+# Programming Languages
+Programming Languages, Frameworks and Libraries Used
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
@@ -207,9 +212,9 @@ In order to develop the project using the Agile methodology, the GItHub Project 
 Please, go to [TESTING.md](TESTING.md) to see a detailed report of the testing of the project.
 
 
-## Deployment
+# Deployment
 
-### Github Deployment
+## Github Deployment
 
 The entire project was stored in one repository created on GitHub, which also includes sophisticated version control capabilities.
 From GitPod environment the following are the commands used to commit the the project to the repository: 
@@ -223,7 +228,7 @@ In the terminal:
 After this the relevant files are available on GitHub.
 
 
-### Create App
+## Create App
 
 To create a new Django project, you use the command:
 
@@ -232,7 +237,8 @@ django-admin startproject project_name
 This command creates a new directory with the specified project_name, containing the basic structure of a Django project, including settings, URLs, and the main manage.py script.
 
 
-### Create a new external database
+## Create database
+Create a new external database
 
 The database used for this project was created using the Code Institute database maker:
 - [CI database maker](https://dbs.ci-dbs.net/)
@@ -240,7 +246,7 @@ The database used for this project was created using the Code Institute database
 - Tthe database URL is sent directly to the student email.
 
 
-### Create the Heroku app
+## Create the Heroku app
 
  - Sign up for Heroku and accept terms of service.
 
@@ -249,7 +255,8 @@ The database used for this project was created using the Code Institute database
  - Give your app a name and select the region closest to you. A name must be unique.
   
 
-### Create an env.py file
+### Create an env file
+Create an env.py file
 
 - Creae a file called **env.py** in order to store private information that must not be shared. The file must saved therefore in the **.gitignore file**.
 
@@ -261,7 +268,7 @@ The database used for this project was created using the Code Institute database
 
 
 
-### Heroku deployment settings
+## Heroku deployment settings
 
 - In the **Settings** tab in the Heroku dashboard:
 
@@ -272,7 +279,8 @@ The database used for this project was created using the Code Institute database
   
 
  
-### Set the Template directory in settings.py
+### Set Template directory
+Set the Template directory in settings.py
 
 
     `TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')`
@@ -290,18 +298,19 @@ The database used for this project was created using the Code Institute database
     ]
     ````
 
-### Add Heroku domain to ALLOWED_HOSTS
+## Heroku host allow
+Add Heroku domain to ALLOWED_HOSTS
 
   ````
   ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost']
   ````
 
-### Create a Procfile
+## Create a Procfile
 
 `web: gunicorn family_recipe.wsgi`
 
 
-### deployment on Heroku
+## Deployment on Heroku
 
 - Click on the **"Deploy"** section on the top of the page.
 
@@ -315,9 +324,9 @@ The database used for this project was created using the Code Institute database
 
 
 
-## Development 
+# Development 
 
-### Fork
+## Fork
 
 - In my **GitHub** repository project, [my PP4 project](https://github.com/davidelan/todo-list):
 
@@ -330,7 +339,7 @@ The database used for this project was created using the Code Institute database
 - The repository has been forked in the user account and can be developed further.
 
 
-### Clone
+## Clone
 
 In order to create a clone of the project:
 
@@ -342,14 +351,14 @@ In order to create a clone of the project:
 6. Clone has been created
 
 
-## Credits
+# Credits
 
-### Content
+## Images
 
 - The background image was found at Pexels. The author is Suzy Hazelwood and can be found here [Suzy Hazelwood](https://www.pexels.com/photo/notebook-1226398/)
 
 
-### Code
+## Code
 
 - ***My Todo List project is based on the tutorial from Desphixs [*Django To Do List App With User Registration & Login*](https://www.youtube.com/watch?v=GRz3pcU89qU)***
   - This was the main source of knowledge for the creation of the project.
@@ -365,7 +374,7 @@ In order to create a clone of the project:
   - [forum djangoproject](https://forum.djangoproject.com/)
   
 
-### ReadMe
+## ReadMe
 
 - This README.md file was created with the inspiration of 3 different read me files:
 
@@ -376,7 +385,7 @@ In order to create a clone of the project:
 Thank you guys!!!
 
 
-### Acknowledgments
+## Acknowledgments
 
 - I would like to say a big thank you to my mentor Jubril Akolade who always pointed me to the right direction, for his availability and for giving me motivation throuhout hte whole project. 
 
