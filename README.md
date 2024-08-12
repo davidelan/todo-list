@@ -119,7 +119,7 @@ I kept the color scheme very simple and I used two different shades of green, on
 
 ## Structure 
 
-The final database schema is the representation of the two database models that were later implemented. As you can see from the image there are more fields than what were used in the project. This is becasue I started with the idea of having multiple TODO Lists which each could contain multiple taks. I would have liked to also show the user for both categories hte date of creation and update. Unfortunately I realized near the submission deadline that I would not have time to implement all the ideas and I had to revert to the simplest version. 
+The final database schema is the representation of the two database models that were later implemented. As you can see from the image there are more fields than what were used in the project. This is becasue I started with the idea of having multiple TODO Lists which each could contain multiple taks. I would have liked to also show the user for both categories the date of creation and update. Unfortunately I realized near the submission deadline that I would not have time to implement all the ideas and I had to revert to the simplest version. 
 It is my intention to proceed with the above implementation when the course has ended.
 
 ![Final Database Schema](documentation/images/erd_todo_list.jpg)<br>
@@ -369,7 +369,7 @@ In order to create a clone of the project:
 - These websites where also often consulted for better understanding and problem solving: <br>
   - [Google](www.google.com)
   - ***[Stack Overflow](https://stackoverflow.com/)***
-  - ***The COde Insitute Slack Community***
+  - ***The Code Insitute Slack Community***
   - [W3schools](https://www.w3schools.com/)
   - [forum djangoproject](https://forum.djangoproject.com/)
   
@@ -378,9 +378,9 @@ In order to create a clone of the project:
 
 - This README.md file was created with the inspiration of 3 different read me files:
 
-[*from Mark Daniel*](https://github.com/markdaniel1982/MD82-P4/blob/main/README.md)
-[*from Dajana Isbaner*](https://github.com/queenisabaer/wishlist/blob/main/README.md)
-[*from Adrian Skelton*](https://github.com/adrianskelton/adrianproject4/blob/main/README.md)
+- [*from Mark Daniel*](https://github.com/markdaniel1982/MD82-P4/blob/main/README.md)
+- [*from Dajana Isbaner*](https://github.com/queenisabaer/wishlist/blob/main/README.md)
+- [*from Adrian Skelton*](https://github.com/adrianskelton/adrianproject4/blob/main/README.md)
 
 Thank you guys!!!
 

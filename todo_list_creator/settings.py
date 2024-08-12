@@ -66,7 +66,6 @@ ROOT_URLCONF = 'todo_list_creator.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        #'DIRS': [os.path.join(BASE_DIR, "templates")], 
         'DIRS': [os.path.join(BASE_DIR, "todo_list/templates")],
         'APP_DIRS': True,
         'OPTIONS': {
