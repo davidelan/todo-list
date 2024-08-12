@@ -207,3 +207,185 @@ In order to develop the project using the Agile methodology, the GItHub Project 
 Please, go to [TESTING.md](TESTING.md) to see a detailed report of the testing of the project.
 
 
+## Deployment
+
+### Github Deployment
+
+The entire project was stored in one repository created on GitHub, which also includes sophisticated version control capabilities.
+From GitPod environment the following are the commands used to commit the the project to the repository: 
+
+In the terminal:
+
+- git add .
+- git commit -m "my descriptive commit message"
+- git push
+
+After this the relevant files are available on GitHub.
+
+
+### Create App
+
+To create a new Django project, you use the command:
+
+django-admin startproject project_name
+
+This command creates a new directory with the specified project_name, containing the basic structure of a Django project, including settings, URLs, and the main manage.py script.
+
+
+### Create a new external database
+
+The database used for this project was created using the Code Institute database maker:
+- [CI database maker](https://dbs.ci-dbs.net/)
+
+- Tthe database URL is sent directly to the student email.
+
+
+### Create the Heroku app
+
+ - Sign up for Heroku and accept terms of service.
+
+ - Click the **"Create a new app"** button.
+
+ - Give your app a name and select the region closest to you. A name must be unique.
+  
+
+### Create an env.py file
+
+- Creae a file called **env.py** in order to store private information that must not be shared. The file must saved therefore in the **.gitignore file**.
+
+- Import os library: `import os`.
+
+- Set environment variables in the **settings.py**:
+  - **DATABASE_URL** containing the a variable related to the url of the database stored in **env.py**
+  - **SECRET_KEY**: containing the a variable related to the the secret key stored in **env.py**
+
+
+
+### Heroku deployment settings
+
+- In the **Settings** tab in the Heroku dashboard:
+
+- Create _Config Vars_:
+  - KEY: **PORT** | VALUE: **8000**.
+  - KEY: **SECRET_KEY** | VALUE: **My_Secret_Key**(that can be find in env.py)
+  - KEY: **DATABASE_URL** | VALUE: The database URL created with CI databse maker (that can be find in env.py)
+  
+
+ 
+### Set the Template directory in settings.py
+
+
+    `TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')`
+
+
+    ````
+    TEMPLATES = [
+    {
+      ...,
+      'DIRS': [TEMPLATES_DIR],
+      ...,
+          ],
+        },
+      },
+    ]
+    ````
+
+### Add Heroku domain to ALLOWED_HOSTS
+
+  ````
+  ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost']
+  ````
+
+### Create a Procfile
+
+`web: gunicorn family_recipe.wsgi`
+
+
+### deployment on Heroku
+
+- Click on the **"Deploy"** section on the top of the page.
+
+- Select **GitHub** as deployment method and click the **"Connect to GitHub"** button.
+
+- Search for the relevant GitHub repository for my project. 
+
+- Click **"Connect"** to link up Heroku app to the GitHub repository.
+
+- Click on **"Deploy Branch"**.
+
+
+
+## Development 
+
+### Fork
+
+- In my **GitHub** repository project, [my PP4 project](https://github.com/davidelan/todo-list):
+
+- In the top-right corner of the page, click **Fork**.
+
+- Type some new name into the "Repository name" field to distinguish your fork from the upstream repository.
+
+- Click **Create Fork**.
+
+- The repository has been forked in the user account and can be developed further.
+
+
+### Clone
+
+In order to create a clone of the project:
+
+1. Click on the code tab, left of the Gitpod tab
+2. To the right of the repository name, click the clipboard icon
+3. In the IED open GitBash
+4. Change the working directory to the location you prefer
+5. Add Git Clone with the copy of the repository name
+6. Clone has been created
+
+
+## Credits
+
+### Content
+
+- The background image was found at Pexels. The author is Suzy Hazelwood and can be found here [Suzy Hazelwood](https://www.pexels.com/photo/notebook-1226398/)
+
+
+### Code
+
+- ***My Todo List project is based on the tutorial from Desphixs [*Django To Do List App With User Registration & Login*](https://www.youtube.com/watch?v=GRz3pcU89qU)***
+  - This was the main source of knowledge for the creation of the project.
+
+- The Python tutorial on how to create a Todo List was also used a a source of inspiration and to understand the connection between the different parts of the Django project: [*Manage Your To-Do Lists Using Python and Django*](https://realpython.com/django-todo-lists/)
+
+
+- These websites where also often consulted for better understanding and problem solving: <br>
+  - [Google](www.google.com)
+  - ***[Stack Overflow](https://stackoverflow.com/)***
+  - ***The COde Insitute Slack Community***
+  - [W3schools](https://www.w3schools.com/)
+  - [forum djangoproject](https://forum.djangoproject.com/)
+  
+
+### ReadMe
+
+- This README.md file was created with the inspiration of 3 different read me files:
+
+[*from Mark Daniel*](https://github.com/markdaniel1982/MD82-P4/blob/main/README.md)
+[*from Dajana Isbaner*](https://github.com/queenisabaer/wishlist/blob/main/README.md)
+[*from Adrian Skelton*](https://github.com/adrianskelton/adrianproject4/blob/main/README.md)
+
+Thank you guys!!!
+
+
+### Acknowledgments
+
+- I would like to say a big thank you to my mentor Jubril Akolade who always pointed me to the right direction, for his availability and for giving me motivation throuhout hte whole project. 
+
+
+- A big thanks again to all the other students in Slack that have helped me and inspired me greatly and that with their Slack contributions have helped me solve a lot issues many, many times.
+
+- Thanks a lot to Kay Welfare for her incredible support that I get every Thursday. 
+
+- Last but not least, a huge thanks ro my partner who has supoprted me, motivated me and put up wiht me in some frustrating moments.
+
+
+**This is for educational use.**
