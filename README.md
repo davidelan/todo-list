@@ -360,8 +360,8 @@ In order to create a clone of the project:
 
 ## Code
 
-- ***My Todo List project is based on the tutorial from Desphixs [*Django To Do List App With User Registration & Login*](https://www.youtube.com/watch?v=GRz3pcU89qU)***
-  - This was the main source of knowledge for the creation of the project.
+- ***My Todo List project is **based** on the tutorial from Desphixs [*Django To Do List App With User Registration & Login*](https://www.youtube.com/watch?v=GRz3pcU89qU)***
+  - This was the main source of knowledge for the creation of the project!
 
 - The Python tutorial on how to create a Todo List was also used a a source of inspiration and to understand the connection between the different parts of the Django project: [*Manage Your To-Do Lists Using Python and Django*](https://realpython.com/django-todo-lists/)
 
